@@ -1,9 +1,19 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SiteHeader } from "../components/site-header";
 import { WorkFilters } from "./work-filters";
 import { ArrowUpRightIcon } from "../components/icons";
 
 const youtubeThumbnail = (videoId: string) => `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+
+export const metadata: Metadata = {
+  title: "Work | Video Editing, Color Grading & Thumbnail Design",
+  description:
+    "Browse Aaditya Dhital's video editing, motion graphics, color grading, and thumbnail design portfolio from Nepal.",
+  alternates: {
+    canonical: "/work",
+  },
+};
 
 const projects = [
   {
