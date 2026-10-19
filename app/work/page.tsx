@@ -9,7 +9,7 @@ const youtubeThumbnail = (videoId: string) => `https://i.ytimg.com/vi/${videoId}
 export const metadata: Metadata = {
   title: "Work | Video Editing, Color Grading & Thumbnail Design",
   description:
-    "Browse Aaditya Dhital's video editing, motion graphics, color grading, and thumbnail design portfolio from Nepal.",
+    "Browse By Aaditya, the video editing portfolio of Aaditya Dhital from Nepal, featuring editing, motion graphics, color grading, and thumbnail design projects.",
   alternates: {
     canonical: "/work",
   },

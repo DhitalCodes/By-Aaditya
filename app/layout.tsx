@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Gloria_Hallelujah, Poppins } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://by-aaditya.vercel.app";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://by-aaditya.vercel.app");
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -38,6 +40,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Aaditya Dhital", url: siteUrl }],
   creator: "Aaditya Dhital",
   publisher: "By Aaditya",
+  applicationName: "By Aaditya",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    telephone: false,
+  },
   alternates: {
     canonical: "/",
   },
@@ -50,31 +57,59 @@ export const metadata: Metadata = {
     siteName: "By Aaditya",
     url: siteUrl,
     locale: "en_US",
+    images: [
+      {
+        url: "/portfolio-assets/images/profile/profile-pic.png",
+        width: 900,
+        height: 1100,
+        alt: "Aaditya Dhital, video editor and aspiring colorist in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "By Aaditya | Video Editor & Aspiring Colorist in Nepal",
     description:
       "Explore the editing, motion, color grading, and thumbnail design work of Aaditya Dhital.",
+    images: ["/portfolio-assets/images/profile/profile-pic.png"],
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const personSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Aaditya Dhital",
-    url: siteUrl,
-    jobTitle: "Video Editor and Aspiring Colorist",
-    description:
-      "A video editor and aspiring colorist based in Nepal, working across editing, motion, color grading, and thumbnail design.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kathmandu",
-      addressCountry: "NP",
-    },
-    sameAs: [
-      "https://www.instagram.com/byaaditya.mov/",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "By Aaditya",
+        alternateName: ["By Aaditya portfolio", "By Aaditya video editing"],
+        url: siteUrl,
+        description:
+          "The portfolio of Aaditya Dhital, a video editor and aspiring colorist based in Nepal.",
+        inLanguage: "en",
+      },
+      {
+        "@type": "Person",
+        name: "Aaditya Dhital",
+        url: siteUrl,
+        jobTitle: "Video Editor and Aspiring Colorist",
+        description:
+          "A video editor and aspiring colorist based in Nepal, working across editing, motion, color grading, and thumbnail design.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kathmandu",
+          addressCountry: "NP",
+        },
+        knowsAbout: [
+          "Video editing",
+          "Color grading",
+          "Motion graphics",
+          "Thumbnail design",
+        ],
+        sameAs: [
+          "https://www.instagram.com/byaaditya.mov/",
+        ],
+      },
     ],
   };
 
@@ -84,7 +119,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </body>
     </html>
