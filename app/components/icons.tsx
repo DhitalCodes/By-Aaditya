@@ -5,7 +5,7 @@ import {
   faPhone,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 type IconProps = {
   className?: string;
@@ -21,6 +21,10 @@ export function PhoneIcon({ className }: IconProps) {
 
 export function InstagramIcon({ className }: IconProps) {
   return <FontAwesomeIcon className={className} icon={faInstagram} aria-hidden="true" />;
+}
+
+export function LinkedinIcon({ className }: IconProps) {
+  return <FontAwesomeIcon className={className} icon={faLinkedinIn} aria-hidden="true" />;
 }
 
 export function ArrowUpRightIcon({ className }: IconProps) {

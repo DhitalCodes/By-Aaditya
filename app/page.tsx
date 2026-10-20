@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectCard } from "./components/project-card";
 import { SiteHeader } from "./components/site-header";
-import { ArrowUpRightIcon, InstagramIcon, MailIcon, PhoneIcon } from "./components/icons";
+import { ArrowUpRightIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./components/icons";
 import { KathmanduTime } from "./components/kathmandu-time";
 
 const youtubeThumbnail = (videoId: string) => `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
@@ -94,7 +94,10 @@ export default function Home() {
           <div className="site-container credibility__grid">
             <div className="credibility__intro">
               <p className="eyebrow">About the practice</p>
-              <h2 className="heading-2">Still learning.<br /><em>Always making.</em></h2>
+              <h2 className="heading-2">
+                <span className="hero-heading-line">Still learning.</span>
+                <span className="hero-handwritten">Always making.</span>
+              </h2>
               <p className="body-large">
                 I&apos;m a brand ambassador for Kalakar, building my practice across editing,
                 motion, and color. Every project is a chance to make the story clearer and
@@ -132,24 +135,26 @@ export default function Home() {
 
         <section className="home-contact site-container" id="contact">
           <div className="home-contact__intro">
-            <h2 className="home-contact__title">Contact</h2>
-            <p className="home-contact__copy">
-              Got a project, question, or just want to connect? Reach out. I&apos;d love to hear from you.
-            </p>
-            <p className="home-contact__location">Kathmandu, Nepal</p>
+            <p className="eyebrow">Get in touch</p>
+            <h2 className="home-contact__title">Let&apos;s make something <em>meaningful.</em></h2>
+          </div>
+          <div className="home-contact__content">
+            <p className="home-contact__copy">Have an edit in mind? Let&apos;s talk.</p>
             <a className="home-contact__email" href="mailto:byaaditya12@gmail.com">
               <MailIcon />
               <span>byaaditya12@gmail.com</span>
               <ArrowUpRightIcon />
             </a>
-          </div>
-          <div className="home-contact__content">
-            <h2 className="home-contact__headline">Let&apos;s grab a coffee and jump on a <em>conversation.</em></h2>
-            <p className="home-contact__prompt">Have an edit in mind? <a href="mailto:byaaditya12@gmail.com">Let&apos;s talk.</a></p>
             <div className="home-contact__details">
-              <a href="tel:+9779860901451"><PhoneIcon /><span>+977 986-090-1451</span></a>
-              <a href="https://www.instagram.com/byaaditya.mov/" target="_blank" rel="noreferrer"><InstagramIcon /><span>Instagram</span><ArrowUpRightIcon /></a>
-              <KathmanduTime />
+              <div className="home-contact__links">
+                <a href="tel:+9779860901451"><PhoneIcon /><span>+977 986-090-1451</span></a>
+                <a href="https://www.instagram.com/byaaditya.mov/" target="_blank" rel="noreferrer"><InstagramIcon /><span>Instagram</span><ArrowUpRightIcon /></a>
+                <a href="https://www.linkedin.com/in/aaditya-dhital/?isSelfProfile=true" target="_blank" rel="noreferrer"><LinkedinIcon /><span>LinkedIn</span><ArrowUpRightIcon /></a>
+              </div>
+              <div className="home-contact__availability">
+                <span className="home-contact__location">Kathmandu, Nepal</span>
+                <KathmanduTime />
+              </div>
             </div>
           </div>
         </section>

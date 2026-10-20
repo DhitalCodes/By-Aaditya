@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRightIcon, CloseIcon } from "./icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -51,6 +51,8 @@ export function ProjectCard({
   showCategory = true,
 }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const isVideo = Boolean(videoId);
 
   useEffect(() => {
@@ -60,9 +62,12 @@ export function ProjectCard({
     };
     document.addEventListener("keydown", closeOnEscape);
     document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    const trigger = triggerRef.current;
     return () => {
       document.removeEventListener("keydown", closeOnEscape);
       document.body.style.overflow = "";
+      trigger?.focus();
     };
   }, [isOpen]);
 
@@ -103,7 +108,7 @@ export function ProjectCard({
   return (
     <>
       {isVideo ? (
-        <button className="project-card project-card--button" type="button" onClick={() => setIsOpen(true)} aria-label={`Play ${title}`}>
+        <button ref={triggerRef} className="project-card project-card--button" type="button" onClick={() => setIsOpen(true)} aria-label={`Play ${title}`}>
           {content}
         </button>
       ) : href ? (
@@ -115,7 +120,7 @@ export function ProjectCard({
         <div className="video-modal" role="dialog" aria-modal="true" aria-label={`${title} video`}>
           <button className="video-modal__backdrop" type="button" aria-label="Close video" onClick={() => setIsOpen(false)} />
           <div className="video-modal__content">
-            <button className="video-modal__close" type="button" aria-label="Close video" onClick={() => setIsOpen(false)}>
+            <button ref={closeRef} className="video-modal__close" type="button" aria-label="Close video" onClick={() => setIsOpen(false)}>
               <CloseIcon />
             </button>
             <div className="video-modal__frame">

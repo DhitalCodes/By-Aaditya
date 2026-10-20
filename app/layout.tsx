@@ -108,6 +108,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         ],
         sameAs: [
           "https://www.instagram.com/byaaditya.mov/",
+          "https://www.linkedin.com/in/aaditya-dhital/?isSelfProfile=true",
         ],
       },
     ],
