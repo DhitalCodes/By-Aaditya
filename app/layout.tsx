@@ -3,8 +3,7 @@ import { Gloria_Hallelujah, Poppins } from "next/font/google";
 import "./globals.css";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://by-aaditya.vercel.app");
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://byaaditya.vercel.app";
 
 const poppins = Poppins({
   variable: "--font-poppins",
