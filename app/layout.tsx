@@ -119,6 +119,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en" className={`${poppins.variable} ${gloriaHallelujah.variable}`}>
+      <head>
+        <meta name="google-site-verification" content="googlef4c41d978e15c100" />
+      </head>
       <body>
         {children}
         <script
