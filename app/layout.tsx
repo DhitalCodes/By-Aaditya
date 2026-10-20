@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   applicationName: "By Aaditya",
   referrer: "origin-when-cross-origin",
   verification: {
-    google: "googlef4c41d978e15c100",
+    google: "rS14HxuI1WfBaIHhjjm2mz0_i7jzESK7s_yAbjifxM0",
   },
   formatDetection: {
     telephone: false,
@@ -120,7 +120,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${poppins.variable} ${gloriaHallelujah.variable}`}>
       <head>
-        <meta name="google-site-verification" content="googlef4c41d978e15c100" />
+        <meta
+          name="google-site-verification"
+          content="rS14HxuI1WfBaIHhjjm2mz0_i7jzESK7s_yAbjifxM0"
+        />
       </head>
       <body>
         {children}
