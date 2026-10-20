@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   publisher: "By Aaditya",
   applicationName: "By Aaditya",
   referrer: "origin-when-cross-origin",
+  verification: {
+    google: "googlef4c41d978e15c100",
+  },
   formatDetection: {
     telephone: false,
   },
