@@ -1800,6 +1800,7 @@ em {
   .home-hero--reference .home-hero__copy {
     order: 1;
     width: 100%;
+    min-width: 0;
     max-width: 34rem;
   }
 
@@ -1812,6 +1813,7 @@ em {
 
   .home-hero--reference .heading-1 {
     width: 100%;
+    min-width: 0;
     max-width: 100%;
     font-size: clamp(2.25rem, 11vw, 4rem);
     line-height: 1.05;
@@ -1820,6 +1822,8 @@ em {
   .home-hero--reference .hero-heading-line,
   .home-hero--reference .hero-handwritten {
     display: block;
+    max-width: 100%;
+    overflow-wrap: anywhere;
     white-space: normal;
   }
 
