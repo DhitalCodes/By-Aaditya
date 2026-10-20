@@ -932,6 +932,7 @@ em {
 }
 
 .home-hero--reference .home-hero__copy .body-large {
+  margin-top: 3rem;
   color: var(--color-on-dark);
 }
 
