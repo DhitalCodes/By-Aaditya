@@ -14,6 +14,7 @@
   --color-surface: #25272c;
   --color-paper: #ffffff;
   --color-on-dark: #d8d9dc;
+  --page-background: linear-gradient(115deg, #1d1a15 0%, #191a1e 48%, #181c2a 100%);
 
   --font-body: var(--font-poppins), Poppins, Helvetica, Arial, sans-serif;
   --font-handwritten: var(--font-gloria), cursive;
@@ -70,7 +71,7 @@
 }
 
 html {
-  background: var(--color-linen);
+  background: var(--page-background);
   color: var(--color-ink);
   font-family: var(--font-body);
   overflow-x: clip;
@@ -88,7 +89,8 @@ body {
   min-width: 320px;
   margin: 0;
   padding-top: 4.25rem;
-  background: var(--color-linen);
+  background: var(--page-background);
+  background-attachment: fixed;
   color: var(--color-ink);
   font-size: var(--size-body);
   line-height: 1.5;
@@ -643,7 +645,7 @@ a {
 
 /* Shared dark editorial treatment inspired by the reference site. */
 body {
-  background: var(--color-linen);
+  background: var(--page-background);
 }
 
 .site-header {
@@ -654,7 +656,7 @@ body {
   left: 0;
   width: 100%;
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  background: var(--color-linen);
+  background: transparent;
   box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 10%);
   isolation: isolate;
 }
@@ -768,7 +770,7 @@ em {
 }
 
 .site-footer {
-  background: var(--color-linen);
+  background: transparent;
 }
 
 @media (max-width: 48rem) {
@@ -812,7 +814,7 @@ em {
 }
 
 .site-header--home {
-  background: #151619;
+  background: transparent;
   color: var(--color-paper);
 }
 
@@ -912,7 +914,7 @@ em {
   grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1fr);
   gap: clamp(3rem, 7vw, 8rem);
   padding-inline: max(var(--page-gutter), calc((100% - var(--content-wide)) / 2 + var(--page-gutter)));
-  background: var(--color-linen);
+  background: transparent;
   color: var(--color-paper);
 }
 
@@ -1127,7 +1129,7 @@ em {
 }
 
 .credibility {
-  background: var(--color-linen);
+  background: transparent;
   color: var(--color-paper);
   padding-block: var(--section-gap);
 }
@@ -1249,7 +1251,7 @@ em {
   grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.1fr);
   align-items: start;
   gap: clamp(3rem, 8vw, 8rem);
-  background: var(--color-linen);
+  background: transparent;
   padding-block: clamp(4.5rem, 8vw, 6.5rem);
 }
 
