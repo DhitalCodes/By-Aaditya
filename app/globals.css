@@ -88,7 +88,7 @@ html::-webkit-scrollbar {
 body {
   min-width: 320px;
   margin: 0;
-  padding-top: 4.25rem;
+  padding-top: 4.75rem;
   background: var(--page-background);
   background-attachment: fixed;
   color: var(--color-ink);
@@ -656,7 +656,8 @@ body {
   left: 0;
   width: 100%;
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  background: transparent;
+  background: var(--page-background);
+  background-attachment: fixed;
   box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 10%);
   isolation: isolate;
 }
@@ -810,11 +811,10 @@ em {
 }
 
 .site-header {
-  padding-block: 0.9rem;
+  padding-block: 1.05rem;
 }
 
 .site-header--home {
-  background: transparent;
   color: var(--color-paper);
 }
 
@@ -836,7 +836,7 @@ em {
 }
 
 .brand {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.06em;
 }
@@ -855,13 +855,13 @@ em {
   border: 1px solid rgb(255 255 255 / 12%);
   border-radius: 999px;
   background: rgb(36 38 43 / 72%);
-  padding: 0.45rem 0.8rem;
+  padding: 0.55rem 1.1rem;
 }
 
 .site-nav a,
 .header-contact {
   color: var(--color-copy);
-  font-size: var(--size-nav);
+  font-size: 0.95rem;
   font-weight: 600;
   transition: color var(--duration-fast) var(--ease-standard);
 }
@@ -886,7 +886,7 @@ em {
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-size: var(--size-nav);
+  font-size: 0.95rem;
   font-weight: 700;
   padding: 0.5rem;
 }
@@ -1565,11 +1565,15 @@ em {
   }
 
   body {
-    padding-top: 3.9rem;
+    padding-top: 4.35rem;
   }
 
   .site-header {
-    padding-block: 0.75rem;
+    padding-block: 0.9rem;
+  }
+
+  .brand {
+    font-size: 1.3rem;
   }
 
   .menu-toggle {
