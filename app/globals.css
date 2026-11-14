@@ -1398,6 +1398,32 @@ em {
   letter-spacing: 0;
 }
 
+/* Keep the reference layout fluid on short viewports without changing its desktop proportions. */
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.site-header__inner,
+.site-footer .site-container,
+.home-hero > *,
+.home-work__grid > *,
+.credibility__grid > *,
+.home-contact > *,
+.work-grid > * {
+  min-width: 0;
+}
+
+.home-hero--reference {
+  min-height: calc(100svh - 4.75rem);
+}
+
+.home-contact__email {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 56rem) {
   .home-hero--reference {
     min-height: auto;
@@ -2034,6 +2060,58 @@ em {
 .home-work .section-heading > .text-link .text-link__arrow {
   display: inline-block;
   transition: transform var(--duration-standard) var(--ease-standard);
+}
+
+@media (max-width: 56rem) {
+  .home-hero--reference .hero-heading-line,
+  .home-hero--reference .hero-handwritten {
+    white-space: normal;
+  }
+}
+
+@media (min-width: 48.01rem) and (max-width: 56rem) and (max-height: 35rem) {
+  .home-hero--reference {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1.15fr) minmax(12rem, 0.85fr);
+    gap: 2rem;
+    padding-block: 2.5rem 3rem;
+  }
+
+  .home-hero--reference .home-hero__copy {
+    order: 2;
+  }
+
+  .home-hero--reference .home-hero__portrait {
+    order: 1;
+    width: min(100%, 18rem);
+  }
+}
+
+@media (max-width: 48rem) {
+  .home-hero--reference {
+    min-height: auto;
+    padding-block: clamp(2.5rem, 8vh, 4.5rem) clamp(4rem, 11vh, 6rem);
+  }
+
+  .home-hero--reference .heading-1 {
+    font-size: clamp(2.25rem, 11vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .home-hero--reference .home-hero__portrait {
+    width: min(100%, 22rem);
+  }
+}
+
+@media (max-width: 48rem) and (max-height: 35rem) {
+  .home-hero--reference {
+    gap: 1.5rem;
+    padding-block: 2rem 3rem;
+  }
+
+  .home-hero--reference .home-hero__portrait {
+    width: min(58vw, 15rem);
+  }
 }
 
 .home-work .section-heading > .text-link:hover {
