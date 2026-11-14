@@ -27,12 +27,12 @@ const selectedWork = [
     mediaClassName: "project-card__media--video",
   },
   {
-    title: "Color Grading Challenge · Day 02",
+    title: "Color Grading Challenge · Day 01",
     category: "Color Grading · 30 Days / 30 Grades",
-    description: "Day 02 of an ongoing 30-day color grading challenge.",
-    image: youtubeThumbnail("vHaNXfT4fsM"),
-    href: "https://youtu.be/vHaNXfT4fsM",
-    videoId: "vHaNXfT4fsM",
+    description: "Day 01 of an ongoing 30-day color grading challenge.",
+    image: youtubeThumbnail("Eo97zaraGUM"),
+    href: "https://youtu.be/Eo97zaraGUM",
+    videoId: "Eo97zaraGUM",
     mediaClassName: "project-card__media--video",
   },
 ];
@@ -55,7 +55,7 @@ export default function Home() {
             </p>
             <div className="home-hero__actions">
               <Link className="button-primary" href="/work">Explore my work <ArrowUpRightIcon /></Link>
-              <span className="home-hero__credential">Brand ambassador<br /><strong>Kalakar</strong></span>
+              <span className="home-hero__credential">Ex-brand ambassador<br /><strong>Kalakar</strong></span>
             </div>
           </div>
           <div className="home-hero__portrait" data-reveal="delay-1">
@@ -99,7 +99,7 @@ export default function Home() {
                 <span className="hero-handwritten">Always making.</span>
               </h2>
               <p className="body-large">
-                I&apos;m a brand ambassador for Kalakar, building my practice across editing,
+                I&apos;m a former brand ambassador for Kalakar, building my practice across editing,
                 motion, and color. Every project is a chance to make the story clearer and
                 more memorable.
               </p>
@@ -147,7 +147,7 @@ export default function Home() {
             </a>
             <div className="home-contact__details">
               <div className="home-contact__links">
-                <a href="tel:+9779860901451"><PhoneIcon /><span>+977 986-090-1451</span></a>
+                <a href="tel:+9779740859548"><PhoneIcon /><span>+977 9740859548</span></a>
                 <a href="https://www.instagram.com/byaaditya.mov/" target="_blank" rel="noreferrer"><InstagramIcon /><span>Instagram</span><ArrowUpRightIcon /></a>
                 <a href="https://www.linkedin.com/in/aaditya-dhital/?isSelfProfile=true" target="_blank" rel="noreferrer"><LinkedinIcon /><span>LinkedIn</span><ArrowUpRightIcon /></a>
               </div>

@@ -964,6 +964,7 @@ em {
 }
 
 .home-hero__copy {
+  min-width: 0;
   max-width: 42rem;
 }
 
@@ -999,6 +1000,7 @@ em {
 
 .home-hero__portrait {
   position: relative;
+  min-width: 0;
   width: min(100%, 29rem);
   justify-self: end;
 }
@@ -1395,6 +1397,40 @@ em {
   font-size: var(--size-nav);
   font-weight: 600;
   letter-spacing: 0;
+}
+
+@media (max-width: 56rem) {
+  .home-hero--reference {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-block: 4.5rem 6rem;
+  }
+
+  .home-hero--reference .home-hero__copy {
+    order: 1;
+    max-width: 42rem;
+  }
+
+  .home-hero--reference .home-hero__portrait {
+    order: 2;
+    width: min(100%, 28rem);
+    justify-self: center;
+  }
+
+  .credibility__grid,
+  .home-contact {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .home-contact__content {
+    max-width: none;
+    padding-top: 2rem;
+    padding-left: 0;
+    border-top: 1px solid var(--color-line);
+    border-left: 0;
+  }
 }
 
 .icon-fill {
