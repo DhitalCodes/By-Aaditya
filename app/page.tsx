@@ -125,7 +125,7 @@ export default function Home() {
                   scrolling="no"
                 />
               </div>
-              <a className="certificate-link" href="/portfolio-assets/certificates/editing-skool-certificate.pdf" target="_blank" rel="noreferrer">
+              <a className="certificate-link" href="/portfolio-assets/certificates/editing-skool-certificate.pdf" target="_blank" rel="noopener noreferrer">
                 <span>Open certificate in a new tab</span>
                 <span aria-hidden="true">↗</span>
               </a>
@@ -148,8 +148,8 @@ export default function Home() {
             <div className="home-contact__details">
               <div className="home-contact__links">
                 <a href="tel:+9779740859548"><PhoneIcon /><span>+977 9740859548</span></a>
-                <a href="https://www.instagram.com/byaaditya.mov/" target="_blank" rel="noreferrer"><InstagramIcon /><span>Instagram</span><ArrowUpRightIcon /></a>
-                <a href="https://www.linkedin.com/in/aaditya-dhital/?isSelfProfile=true" target="_blank" rel="noreferrer"><LinkedinIcon /><span>LinkedIn</span><ArrowUpRightIcon /></a>
+                <a href="https://www.instagram.com/byaaditya.mov/" target="_blank" rel="noopener noreferrer"><InstagramIcon /><span>Instagram</span><ArrowUpRightIcon /></a>
+                <a href="https://www.linkedin.com/in/aaditya-dhital/?isSelfProfile=true" target="_blank" rel="noopener noreferrer"><LinkedinIcon /><span>LinkedIn</span><ArrowUpRightIcon /></a>
               </div>
               <div className="home-contact__availability">
                 <span className="home-contact__location">Kathmandu, Nepal</span>

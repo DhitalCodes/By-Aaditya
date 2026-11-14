@@ -112,7 +112,7 @@ export function ProjectCard({
           {content}
         </button>
       ) : href ? (
-        <a className="project-card" href={href} target="_blank" rel="noreferrer">{content}</a>
+        <a className="project-card" href={href} target="_blank" rel="noopener noreferrer">{content}</a>
       ) : (
         <article className="project-card">{content}</article>
       )}
